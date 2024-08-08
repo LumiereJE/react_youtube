@@ -1,0 +1,10 @@
+// 모든 언어가 나올 수 있도록 셋팅
+@charset "UTF-8";
+
+// setting
+// .scss는 생략 가능
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
