@@ -1,7 +1,8 @@
 import React from "react";
+import Main from "../components/section/Main";
 
 const Website = () => {
-  return <div>Website</div>;
+  return <Main>Wdbsite</Main>;
 };
 
 export default Website;
