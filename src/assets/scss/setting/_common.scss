@@ -20,10 +20,10 @@ section {
 // 마우스 오버 아이콘
 .play__icon {
   a {
-    position: relative;
     display: block;
-    cursor: pointer;
     width: 100%;
+    cursor: pointer;
+    position: relative;
 
     &::before {
       content: "";
@@ -46,11 +46,11 @@ section {
       height: 80px;
       background: var(--blackAlpha400) url(../../img/icon/play.svg) no-repeat
         center;
+      border-radius: 50%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border-radius: 50%;
       opacity: 0;
       transition: opacity 0.3s;
     }
