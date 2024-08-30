@@ -10,8 +10,8 @@ import { websiteText } from "../data/website";
 import { gsapText } from "../data/gsap";
 import { portfolioText } from "../data/portfolio";
 import { youtubeText } from "../data/youtube";
-import { todayText } from "../data/today";
 import { developerText } from "../data/developer";
+import { todayText } from "../data/today";
 
 const Home = () => {
   return (
