@@ -22,6 +22,7 @@
   }
 }
 
+// 비디오 썸네일 css
 .video__inner.search {
   min-height: 100vh;
 
@@ -77,6 +78,8 @@
     }
   }
 }
+
+// 비디오 더보기 버튼
 .video__more {
   button {
     width: 100%;
@@ -92,5 +95,52 @@
     &:hover {
       background-color: var(--black200);
     }
+  }
+}
+
+// 비디오 디테일 페이지
+#videoViewPage {
+  padding: 0;
+
+  @media (max-width: 800px) {
+    margin-top: 80px;
+  }
+}
+.video__view {
+  .video__play {
+    width: 100%;
+    padding-bottom: 56.2%;
+    position: relative;
+  }
+
+  .video__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #111;
+    padding: 10px 30px;
+    border-radius: 40px;
+
+    .id {
+      font-weight: 800;
+    }
+
+    .count {
+      span {
+        border-radius: 40px;
+        font-size: 14px;
+        margin-left: 10px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          vertical-align: -5px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .video__desc {
+    white-space: pre-line;
   }
 }
