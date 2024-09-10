@@ -9,8 +9,8 @@ import { CiBadgeDollar, CiMedal, CiRead } from "react-icons/ci";
 
 const Channel = () => {
   const { channelId } = useParams();
-  const [channelDetail, setChannelDetail] = useState();
-  const [channelVideo, setChannelVideo] = useState([]);
+  const [channelDetail, setChannelDetail] = useState(); // 채널 세부정보를 저장
+  const [channelVideo, setChannelVideo] = useState([]); // 채널 비디오 목록을 저장
   const [loading, setLoading] = useState(true);
   const [nextPageToken, setNextPageToken] = useState(null);
 
@@ -20,12 +20,12 @@ const Channel = () => {
         const data = await fetchFromAPI(
           `channels?part=snippet&id=${channelId}`
         );
-        setChannelDetail(data.items[0]);
+        setChannelDetail(data.items[0]); // 채널id에 따라 불러온 0번째 정보를 저장
 
         const videosData = await fetchFromAPI(
           `search?channelId=${channelId}&part=snippet%2Cid&order=date`
         );
-        setChannelVideo(videosData?.items);
+        setChannelVideo(videosData?.items); // items의 속성은 배열임.
         setNextPageToken(videosData?.nextPageToken);
       } catch (error) {
         console.error("Error fetching data : ", error);
